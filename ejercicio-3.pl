@@ -16,3 +16,34 @@ Rosario, puede ser:
     % IDEA ESTRUCTURA DE LA SOLUCIÓN enrutar(Origen, Destino, Recorrido, Precio_por_trayecto
     , Precio_total, Tipos_transporte) :- ...
 */
+viaje('Macondo', 'Neerlandia', 'Caballo', 5).
+viaje('Neerlandia', 'Valle de Upar', 'Tren', 15).
+viaje('Neerlandia', 'Sektor II', 'Irse con los gitanos rumbo Angosta', 60).
+viaje('Sektor II', 'Paradiso', 'Metro', 3500).
+viaje('Sektor II', 'Salto', 'Canoa', 1500).
+viaje('Salto', 'Luthadel', 'Grieta hacia El Imperio Final', 0).
+viaje('Luthadel', 'Fadrex', 'Caballo', 200).
+viaje('Fadrex', 'Fellise', 'Tren', 500).
+viaje('Fellise', 'Macondo', 'Caminata cognitiva a Cien años de Soledad', 0).
+
+enrutar(Origen, Destino, Recorrido, Precio_trayectos, Precio_total, Tipos_transporte) :-
+    tr_enrutar(Origen, Destino, [Origen], [], 0, [], Recorrido,Precio_trayectos, Precio_total, Tipos_transporte).
+
+tr_enrutar(Origen, Destino, Acc_recorrido, Acc_precios, Acc_total, Acc_tipos, New_acc_recorrido,New_acc_precios, New_acc_total, New_acc_tipos) :-
+    viaje(Origen, Destino, Transporte, Precio),
+    append(Acc_recorrido, [Destino], New_acc_recorrido),
+    append(Acc_precios, [Precio], New_acc_precios),
+    New_acc_total is Acc_total + Precio,
+    append(Acc_tipos, [Transporte], New_acc_tipos),
+    !.
+
+tr_enrutar(Origen, Destino, Acc_recorrido, Acc_precios, Acc_total, Acc_tipos, Recorrido,Precio_trayectos, Precio_total, Tipos_transporte) :-
+    viaje(Origen, X, Transporte, Precio),
+    X \= Destino,
+    append(Acc_recorrido, [X], New_acc_recorrido),
+    append(Acc_precios, [Precio], New_acc_precios),
+    New_acc_total is Acc_total + Precio,
+    append(Acc_tipos, [Transporte], New_acc_tipos),
+    tr_enrutar(X, Destino, New_acc_recorrido, New_acc_precios, New_acc_total, New_acc_tipos, Recorrido, Precio_trayectos, Precio_total, Tipos_transporte).
+
+
