@@ -1,7 +1,7 @@
 # 🦉Teoría de Lenguajes de Programación
 
 ### Integrantes:
-- ***Jimena Hernández _____*** CC. __ Grupo _.
+- ***Jimena Hernández Castillo*** TI.1022094340 Grupo 3.
 - ***Juan Esteban Arango Zapata*** CC.1018230863 Grupo 3.
 
 <p align="center">
