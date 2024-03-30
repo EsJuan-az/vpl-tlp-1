@@ -82,6 +82,8 @@ respuesta_juanes :-
 
 
 
+
+
 /*RESPUESTA DE JIMENA.*/
 generarEstudiante_jime([hugo,[C1,D1]],[paco,[C2,D2]],[luis,[C3,D3]]) :-
     carrera(C1), carrera(C2), carrera(C3),

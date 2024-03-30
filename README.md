@@ -55,7 +55,4 @@ respuesta_juanes.
 
 ### ✨ ¡¡¡Muchas gracias por su atención!!!
 Hasta el próximo VPL.
-<p align="center">
-<img src="https://static.wikia.nocookie.net/supercpps/images/a/a1/Action_Dance_Light_Blue.gif/revision/latest/scale-to-width-down/250?cb=20170709182020&path-prefix=es
-" width="200"/>
-</p>
+
