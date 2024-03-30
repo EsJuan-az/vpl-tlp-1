@@ -25,6 +25,10 @@ remover(2, [1, 2, 3, 4], Nueva_lista).
 potencia(2, 4, Respuesta1).
 potencia(3, -1, Respuesta2).
 ```
+### 💻Ejercicio 2: Invertir un número
+```prolog
+invertir(123456789, Invertido).
+```
 ### 💻Ejercicio 3: Viajeros
 Adjuntamos aquí de manera gráfica la base de conocimientos que establecimos para el problema.
 
@@ -37,6 +41,10 @@ Para hacer una consulta en este caso se usaría por ejemplo:
 
 ```prolog
 enrutar('Macondo', 'Sektor II', Recorrido, Precio_trayectos, Precio_total, Tipos_transporte).
+```
+### 💻Ejercicio 4: Cuadrado Mágico
+```prolog
+mostrarCuadradoMagico.
 ```
 ### 💻Ejercicio 5: Hugo, Paco y Luis.
 En este ejercicio nos tomamos la libertad de realizar dos soluciones distintas para el mismo problema.
